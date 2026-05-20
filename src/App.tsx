@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <Layout>
-        <h1>Content</h1>
+        <h1>Main Content</h1>
       </Layout>
     </>
   )
