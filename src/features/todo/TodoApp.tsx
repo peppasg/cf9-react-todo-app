@@ -5,6 +5,7 @@ import {useTodos} from "./hooks/useTodos.ts";
 // import {CheckSquare, Square} from "lucide-react";
 import TodoList from "./TodoList.tsx";
 import TodoStats from "./TodoStats.tsx";
+import Button from "../../shared/ui/Button.tsx";
 
 const TodoApp = () => {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -30,6 +31,15 @@ const TodoApp = () => {
                 />
 
                 <TodoStats  todos={todos}/>
+
+                {todos.length > 0 && (
+                <Button
+                    addClasses="bg-cf-dark-red"
+                    label="Clear All"
+                    onClick={clearAll}
+                />
+                )}
+
 
             </div>
         </>
