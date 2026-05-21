@@ -4,6 +4,7 @@ import {useTodos} from "./hooks/useTodos.ts";
 // import IconButton from "../../shared/ui/IconButton.tsx";
 // import {CheckSquare, Square} from "lucide-react";
 import TodoList from "./TodoList.tsx";
+import TodoStats from "./TodoStats.tsx";
 
 const TodoApp = () => {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -27,6 +28,8 @@ const TodoApp = () => {
                     onEdit={editTodo}
                     onDelete={deleteTodo}
                 />
+
+                <TodoStats  todos={todos}/>
 
             </div>
         </>
